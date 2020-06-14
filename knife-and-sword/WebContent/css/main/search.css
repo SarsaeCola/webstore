@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left: 200px;
+	color: #404040;
+}
+
+input {
+	width: 300px;
+	height: 30px;
+	border-style: solid;
+	margin: 0px;
+	border-color: #15B69A;
+}
+
+a {
+	text-transform: none;
+	text-decoration: none;
+	border-width: 0px;
+}
+
+a:hover {
+	text-decoration: underline;
+	border-width: 0px;
+}
+
+span {
+	margin: 0px;
+}

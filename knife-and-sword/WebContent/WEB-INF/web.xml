@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>knife-and-sword</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+ 	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>cn.itcast.filter.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<display-name>LoginFilter</display-name>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>kas.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/jsp/cart/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/jsp/order/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/CartItemServlet</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/OrderServlet</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+    <display-name>AdminLoginFilter</display-name>
+    <filter-name>AdminLoginFilter</filter-name>
+    <filter-class>kas.filter.AdminLoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AdminLoginFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+    <url-pattern>/adminJsps/content/*</url-pattern>
+  </filter-mapping>
+	
+	<servlet>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>kas.user.servlet.UserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/UserServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>VerifyCodeServlet</servlet-name>
+		<servlet-class>cn.itcast.vcode.servlet.VerifyCodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerifyCodeServlet</servlet-name>
+		<url-pattern>/VerifyCodeServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CategoryServlet</servlet-name>
+		<servlet-class>kas.category.servlet.CategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CategoryServlet</servlet-name>
+		<url-pattern>/CategoryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>WeaponServlet</servlet-name>
+		<servlet-class>kas.weapon.servlet.WeaponServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WeaponServlet</servlet-name>
+		<url-pattern>/WeaponServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>CartItemServlet</servlet-name>
+		<servlet-class>kas.cartItem.servlet.CartItemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CartItemServlet</servlet-name>
+		<url-pattern>/CartItemServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>OrderServlet</servlet-name>
+		<servlet-class>kas.order.servlet.OrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderServlet</servlet-name>
+		<url-pattern>/OrderServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>AdminServlet</servlet-name>
+		<servlet-class>kas.admin.admin.servlet.AdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminServlet</servlet-name>
+		<url-pattern>/AdminServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminCategoryServlet</servlet-name>
+		<servlet-class>kas.admin.category.servlet.AdminCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminCategoryServlet</servlet-name>
+		<url-pattern>/admin/AdminCategoryServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminWeaponAddServlet</servlet-name>
+		<servlet-class>kas.admin.weapon.AdminWeaponAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminWeaponAddServlet</servlet-name>
+		<url-pattern>/admin/AdminWeaponAddServlet</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>AdminWeaponServlet</servlet-name>
+		<servlet-class>kas.admin.weapon.AdminWeaponServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminWeaponServlet</servlet-name>
+		<url-pattern>/admin/AdminWeaponServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminOrderServlet</servlet-name>
+		<servlet-class>kas.admin.order.AdminOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AdminOrderServlet</servlet-name>
+		<url-pattern>/admin/AdminOrderServlet</url-pattern>
+	</servlet-mapping>
+</web-app>
+

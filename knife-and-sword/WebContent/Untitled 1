@@ -1,0 +1,8 @@
+1.WeaponServlet getPresentPageNumber 的参数
+2.menu类和相应图片 okay
+3.page.totalPage?是否应该存在 
+4.search.jsp 搜索图片缺失 
+5.main/search.jsp 与 weaponservlet/ findbyweaponname （）中wname对应，和方法对应 okay
+6.description.jsp中购买链接的缺失，导入的js和css缺失
+7.cart/list.css 图片路径设置
+8.cart/list.jsp 变量名 ${cartItem.subtotal }

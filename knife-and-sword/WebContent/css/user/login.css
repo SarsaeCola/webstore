@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+body{
+	background: url("../../imgs/login.jpg") no-repeat;
+	background-size: cover;
+}
+#content{
+	background: rgba(216,216,216,0.5); 
+	position: absolute;   
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.login-input-box{
+    margin-top: 12px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: auto;
+ 
+}
+.login-input-box i{
+	background-color: #FFE4C4;
+
+}
+
+label{
+	font-size: 20px;
+	color: #FF0000;
+}
+
+
+#VerifyCodediv{
+		
+		text-align: center;
+}
+#VerifyCode{
+	width: 170px;
+	height: 32px;
+	margin-left: 70px;
+	padding-left: 25px;
+	border: 1px solid #dcdcdc;
+    border-radius: 4px;
+}
+
+#vCode{
+	width: 150px;
+	height: 32px;
+}
+
+#VerifyCodeError{
+	margin-left: 70px;
+}
+
+#changeVerifyCode{
+	color: #FFA500;
+}
+.login-input-box input{
+    width: 340px;
+    height: 32px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding-left: 25px;
+}
+
+.login-input-box input:hover{
+    border: 1px solid #ff7d0a;
+}
+
+.login-input-box input:after{
+    border: 1px solid #bcda0a;
+}
+
+
+.login-button-box{
+    margin-top: 12px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+   	text-align: center;
+}
+
+.login-button-box img{
+	    width: 200px;
+    height: 50px;
+    margin-left: 140px;
+    margin-right: 140px;
+}
+.login-button-box button{
+    background: url("../../imgs/loginbtn.png") no-repeat;
+    color: #000000;
+    font-size: 16px;
+    width: 386px;
+    height: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid #ff7d0a;
+    border-radius: 4px;
+}
+
+.login-button-box button:hover{
+    background-color: #ee7204;
+}
+
+.login-button-box button:active{
+    background-color: #ee7204;
+}
+
+.logon-box{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.logon-box a{
+    margin: 30px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#forget{
+	color:#fc1d45;
+}
+
+#reg{
+	color:#01cb2f;
+}
+.logon-box a:hover{
+    color: #ff7d0a;
+}
+
+.logon-box a:active{
+    color: #ee7204;
+}
+

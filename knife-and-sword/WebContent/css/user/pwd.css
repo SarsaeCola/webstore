@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+body {
+	font-size: 10pt;
+	color: #404040;
+	font-family: Arial;
+}
+
+.div0 {
+	margin: 20px 80px;
+	font-size: 15px;
+}
+
+.div1 {
+	width: 520px;
+	margin-left: 80px;
+	margin-top: 30px;
+	margin-bottom: 0px;
+	font-size: 12px;
+	border: 1px solid #D2D3D5;
+	background-color: #F4FEFF;
+}
+
+table {
+	font-size: 10pt;
+	color: #404040;
+	font-family: Arial;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.input {
+	width: 240px;
+	height: 32px;
+	border: 1px solid #8470FF;
+	line-height: 32px;
+	padding-left: 10px;
+}
+
+.bc {
+	width: 80px;
+	height: 20px;
+	margin-left: 15px;
+}
+
+#vCode {
+	width: 150px;
+	height: 32px;
+}
+
+#VerifyCode {
+	width: 140px;
+	height: 32px;
+}
+
+label.error {
+	color: #cc3300;
+}
+
+#submit{
+  width: 250px; /*宽*/
+  height: 50px; /*高*/
+  text-align: center; /*字体水平居中*/
+  font-size: 28px; /*字体大小*/
+  line-height: 120px; /*行高*/
+  color: #FFD700;
+  text-transform: uppercase; /*字体大写*/
+  text-decoration: none; /*字体增加装饰：去除下划线*/
+  font-family: sans-serif; /*非衬线体*/
+  box-sizing: border-box; /*盒模型大小规则*/
+  background: linear-gradient(
+    90deg,#03a9f4, #f441a5, #ffeb3b, 
+  #03a9f4, #f441a5, #ffeb3b, #03a9f4); /*渐变背景*/
+  border-radius: 30px; /*边框圆角*/
+  background-size: 400%; /*背景大小*/
+  z-index: 1; /*层叠定位*/
+}
+#submit:hover{
+  animation: animate 8s linear infinite alternate; /*动画: 名称 时间 线性 循环 播放完回退播放*/
+}
+@keyframes animate{
+  0%{
+    background-position: 0%; /*修改背景定位，实现渐变色炫光*/
+  }
+  50%{
+    background-position: 100%;
+  }
+  100%{
+    background-position: 0%;
+  }
+}
+#submit::before{ /*之前添加*/
+  content: ''; /*内容*/
+  z-index: -1; 
+  background: linear-gradient(
+    90deg,#03a9f4, #f441a5, #ffeb3b, #03a9f4, 
+  #f441a5, #ffeb3b, #03a9f4);
+  border-radius: 40px;
+  background-size: 400%;
+  filter: blur(20px); /*过渡：模糊*/
+  opacity: 0; /*透明度*/
+  transition: 1s; /*过渡时间*/
+}
+#submit:hover::before{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite; /*注意动画名称统一*/
+}

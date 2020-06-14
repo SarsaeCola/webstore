@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+#addr {
+	width: 500px;
+	height: 32px;
+	border: 1px solid #7f9db9;
+	padding-left: 10px;
+	line-height: 32px;
+}
+
+table {
+	font-size: 10pt;
+	font-family: SimSun;
+	border-color: #efeae5;
+	border-style: solid;
+	border-width: 5px;
+	color: #404040;
+}
+
+td {
+	border-color: #efeae5;
+	border-style: solid;
+	border-width: 0;
+	border-bottom-width: 1px;
+	padding: 10px;
+}
+
+
+
+a {
+	text-decoration: none;
+	color: #018BD3;
+}
+
+a:visited {
+	color: #018BD3;
+}
+
+a:hover {
+	color: #FF6600;
+	text-decoration: underline;
+}
+
+.price_n {
+	color: #c30;
+	font-weight: bold;
+	padding-right: 10px;
+	font-family: Arial;
+}
+
+.price_t {
+	color: #c30;
+	font-weight: bold;
+	padding-right: 10px;
+	font-family: Arial;
+	font-size: 15pt;
+}
+
+a.linkImage {
+	display: inline-block;
+	border: 1px solid #ffffff;
+}
+
+a.linkImage:HOVER {
+	display: inline-block;
+	border: 1px solid #d0d0d0;
+}
+
+a.link2:active {
+	border: 1px dotted #404040;
+}
+
+#addrError{
+	font-size: 20px;
+	color: #FF0000;
+}
+
+#linkSubmit{
+  width: 250px; /*宽*/
+  height: 50px; /*高*/
+  text-align: center; /*字体水平居中*/
+  font-size: 30px; /*字体大小*/
+  line-height: 120px; /*行高*/
+  color: #FFD700;
+  text-transform: uppercase; /*字体大写*/
+  text-decoration: none; /*字体增加装饰：去除下划线*/
+  font-family: sans-serif; /*非衬线体*/
+  box-sizing: border-box; /*盒模型大小规则*/
+  background: linear-gradient(
+    90deg,#03a9f4, #f441a5, #ffeb3b, 
+  #03a9f4, #f441a5, #ffeb3b, #03a9f4); /*渐变背景*/
+  border-radius: 30px; /*边框圆角*/
+  background-size: 400%; /*背景大小*/
+  z-index: 1; /*层叠定位*/
+}
+#linkSubmit:hover{
+  animation: animate 8s linear infinite alternate; /*动画: 名称 时间 线性 循环 播放完回退播放*/
+}
+@keyframes animate{
+  0%{
+    background-position: 0%; /*修改背景定位，实现渐变色炫光*/
+  }
+  50%{
+    background-position: 100%;
+  }
+  100%{
+    background-position: 0%;
+  }
+}
+#linkSubmit::before{ /*之前添加*/
+  content: ''; /*内容*/
+  z-index: -1; 
+  background: linear-gradient(
+    90deg,#03a9f4, #f441a5, #ffeb3b, #03a9f4, 
+  #f441a5, #ffeb3b, #03a9f4);
+  border-radius: 40px;
+  background-size: 400%;
+  filter: blur(20px); /*过渡：模糊*/
+  opacity: 0; /*透明度*/
+  transition: 1s; /*过渡时间*/
+}
+#linkSubmit:hover::before{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite; /*注意动画名称统一*/
+}
